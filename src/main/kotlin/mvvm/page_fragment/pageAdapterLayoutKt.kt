@@ -18,6 +18,14 @@ fun pageAdapterLayoutKt(
    
     
     
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:text="测试"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
     
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
