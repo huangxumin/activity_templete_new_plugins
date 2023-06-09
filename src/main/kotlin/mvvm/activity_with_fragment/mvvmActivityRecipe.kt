@@ -2,6 +2,7 @@ package mvvm.activity_with_fragment
 
 import com.android.tools.idea.wizard.template.ModuleTemplateData
 import com.android.tools.idea.wizard.template.RecipeExecutor
+import com.android.tools.idea.wizard.template.impl.activities.common.generateManifest
 import mvvm.activity_with_fragment.mvvmActivityXml
 import mvvm.page_fragment.*
 
@@ -24,17 +25,15 @@ fun RecipeExecutor.mvvmActivityRecipe(
 ) {
     val (projectData, srcOut, resOut) = moduleData
     val ktOrJavaExt = projectData.language.extension
-//    generateManifest(
-//            moduleData = moduleData,
-//            activityClass = "${activityClass}Activity",
-//            activityTitle = activityClass,
-//            packageName = packageName,
-//            isLauncher = false,
-//            hasNoActionBar = false,
-//            generateActivityTitle = true,
-//            requireTheme = false,
-//            useMaterial2 = false
-//    )
+
+    generateManifest(
+            moduleData = moduleData,
+            activityClass = "${activityClass}Activity",
+            packageName = packageName,
+            isLauncher = false,
+            hasNoActionBar = false,
+            generateActivityTitle = false,
+    )
 
     val mvvmActivity = mvvmAcitivityKt(basePackageName,
             activityClass, layoutName, packageName,beanName,viewModelEnable,needPaging3Enable)
