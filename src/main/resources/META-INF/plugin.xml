@@ -10,9 +10,20 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.huangxumin.activitytempletenewplugins.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+
+<!--        <applicationService serviceImplementation="com.github.huangxumin.activitytempletenewplugins.services.MyProjectService"/>-->
+        <projectService serviceImplementation="com.github.huangxumin.activitytempletenewplugins.services.MyProjectService"/>
     </extensions>
+
+
 
     <applicationListeners>
         <listener class="com.github.huangxumin.activitytempletenewplugins.listeners.MyFrameStateListener" topic="com.intellij.ide.FrameStateListener"/>
     </applicationListeners>
+
+    <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
+        <wizardTemplateProvider implementation="com.github.huangxumin.activitytempletenewplugins.mvvm.SamplePluginTemplateProviderImpl" />
+    </extensions>
+
+
 </idea-plugin>
