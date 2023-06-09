@@ -1,4 +1,4 @@
-package other.mvvm.page_fragment
+package mvvm.page_fragment
 
 fun pageBeanKt(
         basePackageName: String,
@@ -9,7 +9,7 @@ fun pageBeanKt(
 package ${packageName}
 
 
-class ${beanName}Bean(
+data class ${beanName}Bean(
      var xx: String = "",
 ) 
 """

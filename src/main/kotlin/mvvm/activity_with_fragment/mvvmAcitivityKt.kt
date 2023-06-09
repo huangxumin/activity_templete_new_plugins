@@ -1,4 +1,4 @@
-package other.mvvm.activity_with_fragment
+package mvvm.activity_with_fragment
 
 fun mvvmAcitivityKt(
     basePackageName: String,
@@ -12,13 +12,12 @@ fun mvvmAcitivityKt(
     """
 package $packageName
 
-import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.afanticar.common.utils.setOnSingleClickListener
 import ${packageName}.databinding.Activity${activityClass}Binding
 import com.afanticar.base.ui.BaseMvvmActivity
-import com.afanticar.common.dialog.CommonDialog
 
 
 class ${activityClass}Activity : BaseMvvmActivity<Activity${activityClass}Binding,${activityClass}ViewModel>(R.layout.${layoutName}) {
@@ -52,49 +51,24 @@ class ${activityClass}Activity : BaseMvvmActivity<Activity${activityClass}Bindin
     
     companion object {
 
-        fun launch(
-            activity: Activity
-        ) {
-            activity.startActivity(
-                Intent(
-                    activity,
-                    ${activityClass}Activity::class.java
-                ).apply {
 
-                   // putExtra("medalId", medalId)
-              
-                })
-        }
-        
-        
-        fun launchWithContext(
+        fun launch(
             context: Context
         ) {
+
+            val activity = getActivity(context)
             context.startActivity(
                 Intent(
                     context,
-                    DiagnosisActionCenterActivity::class.java
+                    ${activityClass}Activity::class.java
                 ).apply {
-                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    if (activity == null) {
+                        //不是ac，需要
+                        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    }
                     // putExtra("medalId", medalId)
 
                 })
-        }
-
-        fun launch(
-            context: Context
-        ) {
-
-            val activity = CommonDialog.getActivity(context)
-
-
-            if (activity != null) {
-                launch(activity)
-            } else {
-                launchWithContext(context)
-            }
-
-
         }
     }
 }

@@ -1,7 +1,8 @@
-package other.mvvm.page_fragment
+package mvvm.page_fragment
 
 import com.android.tools.idea.wizard.template.*
 import com.android.tools.idea.wizard.template.impl.activities.common.MIN_API
+import mvvm.page_fragment.pageFragmentRecipe
 
 
 val pageFragmentTemplate

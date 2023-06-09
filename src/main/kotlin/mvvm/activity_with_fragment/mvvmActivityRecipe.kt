@@ -1,8 +1,9 @@
-package other.mvvm.activity_with_fragment
+package mvvm.activity_with_fragment
 
 import com.android.tools.idea.wizard.template.ModuleTemplateData
 import com.android.tools.idea.wizard.template.RecipeExecutor
-import other.mvvm.page_fragment.*
+import mvvm.activity_with_fragment.mvvmActivityXml
+import mvvm.page_fragment.*
 
 
 fun RecipeExecutor.mvvmActivityRecipe(

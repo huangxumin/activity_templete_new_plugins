@@ -1,4 +1,4 @@
-package other.mvvm.page_fragment
+package mvvm.page_fragment
 
 import com.android.tools.idea.wizard.template.ModuleTemplateData
 import com.android.tools.idea.wizard.template.RecipeExecutor

@@ -1,4 +1,4 @@
-package other.mvvm.activity_with_fragment
+package mvvm.activity_with_fragment
 
 fun beanPagingSourceKt(
         packageName: String,

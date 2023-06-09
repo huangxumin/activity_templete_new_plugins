@@ -1,4 +1,4 @@
-package other.mvvm.page_fragment
+package mvvm.page_fragment
 
 fun pageFragmentViewModel(
     basePackageName: String,

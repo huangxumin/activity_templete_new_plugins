@@ -1,4 +1,4 @@
-package other.mvvm.page_fragment
+package mvvm.page_fragment
 
 fun pageFragmentKt(
     basePackageName: String?,
@@ -42,10 +42,19 @@ class ${fragmentClass}Fragment : PageNewFragment<Fragment${fragmentClass}Binding
     }
     
     override fun initDataCallback() {
-        mViewModel.m${fragmentClass}Data.observe(this, {
-            setPageAdapterDataAndResetViewStatusWithDefaultAdapter(it)
-        })
+        mViewModel.m${fragmentClass}Data.observe(this){
 
+            it.isSuccess { registerSuccessBean, list ->
+
+
+            }
+            it.isFailed { localizewdCode, localizewdMessage ->
+
+
+            }
+
+            setPageAdapterDataAndResetViewStatusWithDefaultAdapter(it)
+        }
     }
     
      @InternalCoroutinesApi
@@ -56,14 +65,14 @@ class ${fragmentClass}Fragment : PageNewFragment<Fragment${fragmentClass}Binding
     @InternalCoroutinesApi
     override fun initView() {
         prepareDefaultPageViewStatus(
-            mBinding?.refreshLayout,
+            mBinding.refreshLayout,
             mBinding.recyclerview,
             m${beanName}Adapter,
             mBinding.loading,
         )
 
-        mBinding?.recyclerview.removeItemDecoration(mLinearSpacingItemDecoration)
-        mBinding?.recyclerview.addItemDecoration(
+        mBinding.recyclerview.removeItemDecoration(mLinearSpacingItemDecoration)
+        mBinding.recyclerview.addItemDecoration(
             mLinearSpacingItemDecoration
         )
 

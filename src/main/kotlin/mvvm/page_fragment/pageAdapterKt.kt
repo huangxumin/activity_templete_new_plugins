@@ -1,4 +1,4 @@
-package other.mvvm.page_fragment
+package mvvm.page_fragment
 
 fun pageAdapterKt(
         basePackageName: String,
@@ -11,7 +11,6 @@ fun pageAdapterKt(
 package ${packageName}
 
 
-import ${packageName}.${beanName}Bean
 import ${packageName}.databinding.${beanName}ItemLayoutBinding
 import com.afanticar.common.common_page_new_utils.adapter.CommonPageAdapter
 import com.chad.library.adapter.base.viewholder.BaseDataBindingHolder
@@ -21,11 +20,11 @@ class ${adapterName}() : CommonPageAdapter<${beanName}Bean,${beanName}ItemLayout
 
 
     override fun areItemsTheSameFun(oldItem: ${beanName}Bean, newItem: ${beanName}Bean): Boolean {
-        return oldItem?.xx == newItem?.xx
+        return oldItem == newItem
     }
 
     override fun areContentsTheSameFun(oldItem: ${beanName}Bean, newItem: ${beanName}Bean): Boolean {
-        return oldItem?.xx == newItem?.xx
+        return oldItem == newItem
     }
     
     

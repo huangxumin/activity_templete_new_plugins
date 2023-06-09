@@ -1,9 +1,13 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.huangxumin.activitytempletenewplugins</id>
-    <name>activity_templete_new_plugins Template</name>
+    <name>MVVM_Template</name>
     <vendor>huangxumin</vendor>
 
+
+    <depends>org.jetbrains.android</depends>
+    <depends>org.jetbrains.kotlin</depends>
+    <depends>com.intellij.modules.java</depends>
     <depends>com.intellij.modules.platform</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
@@ -22,7 +26,8 @@
     </applicationListeners>
 
     <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
-        <wizardTemplateProvider implementation="com.github.huangxumin.activitytempletenewplugins.mvvm.SamplePluginTemplateProviderImpl" />
+        <wizardTemplateProvider implementation="mvvm.SamplePluginTemplateProviderImpl" />
+
     </extensions>
 
 
