@@ -19,12 +19,14 @@ import android.os.Bundle
 import android.view.View
 import ${packageName}.R
 import ${packageName}.${beanName}Adapter
+import com.afanticar.aft_common.widget.LinearSpacingItemDecoration
+import com.afanticar.common.common_fragment_page.PageNewFragment
+import com.afanticar.common.common_fragment_page.bean.LoadStatusBean
+import com.afanticar.common.common_fragment_page.bean.isFailed
+import com.afanticar.common.common_fragment_page.bean.isSuccess
 import ${packageName}. ${beanName}Bean
 import ${packageName}.databinding.Fragment${fragmentClass}Binding
-import com.afanticar.common.common_page_new_utils.PageNewFragment
-import com.afanticar.common.common_page_new_utils.bean.LoadStatusBean
-import com.afanticar.common.widget.LinearSpacingItemDecoration
-import kotlinx.coroutines.InternalCoroutinesApi
+
 
 
 class ${fragmentClass}Fragment : PageNewFragment<Fragment${fragmentClass}Binding,${fragmentClass}ViewModel, ${beanName}Bean>(R.layout.${layoutName}) {

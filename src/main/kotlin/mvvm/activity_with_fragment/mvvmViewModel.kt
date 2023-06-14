@@ -14,10 +14,9 @@ package $packageName
 import android.app.Application
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.afanticar.common.common_page_new_utils.CommonPageViewModel
-import com.afanticar.common.common_page_new_utils.bean.CommonPageStatusBean
-import com.afanticar.common.common_page_new_utils.bean.LoadStatusBean
-import kotlinx.coroutines.InternalCoroutinesApi
+import com.afanticar.common.common_fragment_page.CommonPageViewModel
+import com.afanticar.common.common_fragment_page.bean.CommonPageStatusBean
+import com.afanticar.common.common_fragment_page.bean.LoadStatusBean
 import kotlinx.coroutines.launch
 
 class ${activityClass}ViewModel constructor(application: Application): CommonPageViewModel(application) {
@@ -27,7 +26,6 @@ class ${activityClass}ViewModel constructor(application: Application): CommonPag
 
     val m${activityClass}Data = MutableLiveData<CommonPageStatusBean<${beanName}Bean>>()
 
-    @InternalCoroutinesApi
     fun get${activityClass}Data(loadStatus: LoadStatusBean) {
 
         viewModelScope.launch {

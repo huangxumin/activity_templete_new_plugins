@@ -10,10 +10,10 @@ fun mvvmRepository(
     """
 package ${packageName}
 
-import com.afanticar.common.common_page_new_utils.bean.CommonPageStatusBean
-import com.afanticar.common.common_page_new_utils.bean.LoadStatusBean
+import com.afanticar.common.common_fragment_page.bean.CommonPageStatusBean
+import com.afanticar.common.common_fragment_page.bean.LoadStatusBean
+import com.afanticar.network.bean.CommonPageBean
 import com.afanticar.common.net.executeReturnCommonBean
-import javax.inject.Inject
 
 
 class ${activityClass}Repository @Inject constructor() {

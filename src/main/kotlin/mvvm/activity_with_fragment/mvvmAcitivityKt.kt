@@ -16,8 +16,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.afanticar.common.utils.setOnSingleClickListener
+import com.afanticar.aft_base.base_page.activity.BaseMvvmActivity
 import ${packageName}.databinding.Activity${activityClass}Binding
-import com.afanticar.base.ui.BaseMvvmActivity
+
 
 
 class ${activityClass}Activity : BaseMvvmActivity<Activity${activityClass}Binding,${activityClass}ViewModel>(R.layout.${layoutName}) {
